@@ -21,7 +21,7 @@ get_header(); ?>
 
 <!-- 
 
-    lorem  ipsum
+    lorem  ipsum teste
 -->
 
 <section class="l-banner position-relative d-flex justify-content-center align-items-center">
