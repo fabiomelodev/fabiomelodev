@@ -1,0 +1,19 @@
+$layout-name: 'l-contact';
+
+.#{$layout-name} {
+    &__title {
+        font-size: 1.875rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: 1.375rem;
+        }
+    }
+    
+    &__label {
+        font-size: 1.125rem;
+
+        @media screen and (max-width: 767px) {
+            font-size: .875rem;
+        }
+    }
+}

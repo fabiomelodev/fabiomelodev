@@ -1,0 +1,15 @@
+$utility-name: 'u-border';
+
+.#{$utility-name} {
+    &-top {
+        &-2 {
+            border-top: 2px solid;
+        }
+    }
+
+    &-bottom {
+        &-2 {
+            border-bottom: 2px solid;
+        }
+    }
+}

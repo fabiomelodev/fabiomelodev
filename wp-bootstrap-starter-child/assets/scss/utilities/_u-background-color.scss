@@ -1,0 +1,35 @@
+$utility-name: 'u-bg-folk';
+
+.#{$utility-name} {
+    &-black {
+        background-color: $color-folk-black;
+    }
+    
+    &-none {
+        background: none !important;
+    }
+    
+    &-purple {
+        background-color: $color-folk-purple;
+    }
+    
+    &-white {
+        background-color: $color-folk-white;
+    }
+}
+
+.hover\: {
+    &#{$utility-name} {
+        &-purple {
+            &:hover {
+                background-color: $color-folk-purple;
+            }
+        }
+
+        &-white {
+            &:hover {
+                background-color: $color-folk-white;
+            }
+        }
+    }
+}

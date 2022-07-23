@@ -1,0 +1,8 @@
+$component-name: 'c-btn';
+
+.#{$component-name} {
+    &-pattern {
+        border: 1px solid;
+        border-radius: 6px;
+    }
+}

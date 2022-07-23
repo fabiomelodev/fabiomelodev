@@ -1,0 +1,9 @@
+$layout-name: 'l-header';
+
+.#{$layout-name} {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 9999;
+}

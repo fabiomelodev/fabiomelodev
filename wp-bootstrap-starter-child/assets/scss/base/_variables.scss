@@ -1,0 +1,20 @@
+$spacer: 1rem !default;
+$spacers: () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 4.5),
+    7: ($spacer * 6),
+    8: ($spacer * 6.5)),
+  $spacers);
+
+  
+  $color-folk-black: #000 !important;
+  $color-folk-light-black: rgba(0, 0, 0, .5) !important;
+  $color-folk-purple: #6F14F1 !important;
+  $color-folk-white: #FFF !important;

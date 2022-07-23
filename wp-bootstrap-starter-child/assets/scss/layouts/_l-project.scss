@@ -1,0 +1,132 @@
+$layout-name: 'l-project';
+
+.#{$layout-name} {
+    background-color: $color-folk-black;
+
+    &__navbar {
+        @media screen and (max-width: 575px) {
+            width: 100%;
+        }
+
+        &__item {
+            padding: 0 .5rem;
+            border-right: 1px solid $color-folk-white;
+            opacity: .8;
+            position: relative;
+            font-weight: 400;
+            color: $color-folk-white;
+            cursor: pointer;
+
+            @media screen and (max-width: 575px) {
+                color: $color-folk-black;
+                background-color: $color-folk-white;
+            }
+            
+            &:last-child {
+                border-right: 0 !important;
+            }
+
+            &::before {
+                content: '';
+                width: 0;
+                height: 1px;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all .2s;
+                position: absolute;
+                background-color: $color-folk-white;
+            }
+
+            &:hover {
+                &::before {
+                    width: calc( 100% - 20px);
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                font-weight: bold;
+
+                &::before {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+
+    &__col {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__card {
+        height: 100%;
+        border-radius: 10px !important;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 10px;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: $color-folk-purple;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: all .2s;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: $color-folk-black;
+        }
+
+        &:hover {
+            &::after {
+                opacity: .8;
+                visibility: visible;
+            }
+
+            .#{$layout-name} {
+                &__card-link {
+                    top: 50%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .card-img {
+            height: 174px;
+        }
+    }
+
+    &__card-link {
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .2s;
+        opacity: 0;
+        visibility: hidden;
+        border: 2px solid $color-folk-white;
+        border-radius: 6px;
+        position: absolute;
+        font-weight: medium;
+        color: $color-folk-white;
+        z-index: 999;
+
+        &:hover {
+            border-color: $color-folk-purple;
+            background-color: $color-folk-purple;
+        }
+    }
+}

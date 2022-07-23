@@ -1,0 +1,96 @@
+$layout-name: 'l-navbar';
+
+.#{$layout-name} {
+    width: 30%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(120%);
+    transition: all .2s;
+    position: absolute !important;
+    background-color: $color-folk-purple;
+
+    @media screen and (max-width: 991px) {
+        width: 100%;
+    }
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .nav-item {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 20%;
+            height: 2px;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .2s;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: $color-folk-white;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .nav-link {
+        font-weight: 600;
+        color: $color-folk-white;
+
+        @media screen and (max-width: 991px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__toggler {
+        top: 2rem;
+        right: 4%;
+        border: 0;
+        transition: all .2s;
+        outline: none;
+        position: absolute;
+        font-size: .75rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-folk-white;
+        background: none;
+        z-index: 9999;
+
+        &.active {
+            right: 35%;
+
+            @media screen and (max-width: 991px) {
+                right: 50%;
+            }
+
+            &::before {
+                content: '\f00d';
+            }
+        }
+
+        &::before {
+            content: '\f0c9';
+            top: 50%;
+            right: -2rem;
+            transform: translateY(-50%);
+            transition: all .2s;
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: 900;
+            font-family: 'Font Awesome 5 Free';
+            color: $color-folk-white;
+            z-index: 99999
+        }
+    }
+}

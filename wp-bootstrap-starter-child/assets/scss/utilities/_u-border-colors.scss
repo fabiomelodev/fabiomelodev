@@ -1,0 +1,17 @@
+$utility-name: 'u-border-color';
+
+.#{$utility-name} {
+    &-white {
+        border-color: $color-folk-white;
+    }
+}
+
+.hover\: {
+    &#{$utility-name} {
+        &-purple {
+            &:hover {
+                border-color: $color-folk-purple;
+            }
+        }
+    }
+}

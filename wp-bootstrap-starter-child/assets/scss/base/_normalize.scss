@@ -1,0 +1,20 @@
+*{ font-family: 'Montserrat', sans-serif !important; }
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden !important;
+	font-size: 100%;
+	background-color: #222;
+}
+
+a,
+input,
+button{
+	&:focus{
+		border: 0 !important;
+		outline: none !important;
+	}
+}

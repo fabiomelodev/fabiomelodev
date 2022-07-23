@@ -1,0 +1,17 @@
+@keyframes is-bouncing {
+    0% {
+        transform:translate(-50%, 0)
+    }
+    
+    50% {
+        transform:translate(-50%, -20%)
+    }
+    
+    100% {
+        transform:translate(-50%, 0)
+    }
+}
+
+.is-bouncing {
+    animation:is-bouncing 2s linear infinite !important;
+}

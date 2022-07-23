@@ -1,0 +1,43 @@
+$layout-name: 'l-social-media';
+
+.#{$layout-name} {
+    &__top {
+        top: 50%;
+        right: 1.5%;
+        transform: translateY(-50%);
+        transition: all .2s;
+        position: absolute;
+
+        &.active {
+            right: 32.5%;
+        }
+
+        &__item {
+            position: relative;
+
+            &::before {
+                content: attr(data-username);
+                width: 200px;
+                top: 50%;
+                right: 300%;
+                transform: translateY(-50%);
+                transition: all .6s;
+                opacity: 0;
+                visibility: hidden;
+                display: flex;
+                justify-content: flex-end;
+                position: absolute;
+                font-weight: 500;
+                color: $color-folk-white;
+            }
+
+            &:hover {
+                &::before {
+                    right: 150%;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

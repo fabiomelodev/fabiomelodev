@@ -1,0 +1,27 @@
+$utility-name: 'u-icon';
+
+.#{$utility-name} {
+    &__brands {
+        &::before {
+            font-family: 'Font Awesome 5 Brands';
+        }
+    }
+
+    &__facebook {
+        &::before {
+            content: '\f39e';
+        }
+    }
+
+    &__instagram {
+        &::before {
+            content: '\f16d';
+        }
+    }
+
+    &__whatsapp {
+        &::before {
+            content: '\f232';
+        }
+    }
+}

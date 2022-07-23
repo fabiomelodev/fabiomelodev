@@ -1,0 +1,55 @@
+$layout-name: 'l-language';
+
+.#{$layout-name} {
+    width: 160px;
+    height: 60px;
+    bottom: 1rem;
+    right: 1rem;
+    padding: .5rem 1rem;
+    transition: all .2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #111;
+
+    &.is-move {
+        right: 32.5%;
+    }
+
+    &__box {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin: 0 .5rem;
+        font-weight: bold;
+    }
+
+    &__change {
+        width: 60px;
+        height: 100%;
+        top: 50%;
+        left: 0;
+        transition: all .2s;
+        transform: translateY(-50%);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        background-color: $color-folk-purple;
+        cursor: pointer;
+
+        &.active {
+            left: 4.5rem;
+        }
+    }
+}

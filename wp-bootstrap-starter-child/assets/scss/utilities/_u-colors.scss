@@ -1,0 +1,31 @@
+$utility-name: 'u-color-folk';
+
+.#{$utility-name} {
+    &-black {
+        color: $color-folk-black;
+    }
+
+    &-light-black {
+        color: $color-folk-light-black;
+    }
+
+    &-white {
+        color: $color-folk-white;
+    }
+}
+
+.hover\: {
+    &#{$utility-name} {
+        &-black {
+            &:hover {
+                color: $color-folk-black;
+            }
+        }
+        
+        &-white {
+            &:hover {
+                color: $color-folk-white;
+            }
+        }
+    }
+}
