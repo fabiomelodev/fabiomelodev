@@ -25,17 +25,13 @@
         </div>
     </footer> #colophon -->
 
-    <!-- widget social media -->
-    <?php echo get_template_part( 'template-parts/content', 'widget-social-media' ) ?>
-    <!-- end widget social media -->
+    <!-- widget social media
+    <php echo get_template_part( 'template-parts/content', 'widget-social-media' ) >
 
-    <!-- loading -->
-    <?php echo get_template_part( 'template-parts/content', 'loading' );  ?>
-    <!-- end loading -->
+    <php echo get_template_part( 'template-parts/content', 'loading' );  >
 
-    <!-- change language -->
-    <?php echo get_template_part( 'template-parts/content', 'change-language' );  ?>
-    <!-- end change language -->
+    <php echo get_template_part( 'template-parts/content', 'change-language' );  >
+    end change language -->
 
     <footer class="l-footer u-bg-folk-black mt-n3 mt-lg-0 py-5">
         <p class="font-weight-bold text-center u-color-folk-white mb-0">

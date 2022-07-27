@@ -1,0 +1,53 @@
+$layout-name: 'l-budget';
+
+.#{$layout-name} {
+    height: calc(100vh - 100px);
+    background-image: url(../../images/budget-banner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &__overlay-top,
+    &__overlay-bottom {
+        width: 100%;
+        height: 50%;
+        left: 0;
+        position: absolute;
+    }
+
+    &__overlay-top {
+        top: 0;
+        background-image: linear-gradient(to bottom, #000, transparent);
+    }
+
+    &__overlay-bottom {
+        bottom: 0;
+        background-image: linear-gradient(to top, #000, transparent);
+    }
+
+    &__overlay-left,
+    &__overlay-right {
+        width: 50%;
+        height: 100%;
+        top: 0;
+        position: absolute;
+    }
+
+    &__overlay-left {
+        left: 0;
+        background-image: linear-gradient(to right, #000, transparent);
+    }
+
+    &__overlay-right {
+        right: 0;
+        background-image: linear-gradient(to right, transparent, #000);
+    }
+
+    &__title {
+        font-size: 1.125rem;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
+}
